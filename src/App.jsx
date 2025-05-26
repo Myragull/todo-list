@@ -53,6 +53,7 @@ function App() {
                   <div className="todo-item">
                   <label>
                     <input
+                       className="checkbox"
                       type="checkbox"
                       checked={todo.completed}
                       onChange={() => handleToggle(todo.id)}
@@ -65,7 +66,6 @@ function App() {
                       {todo.title}
                     </span>
                   </label>
-                  </div>
 
                   <button
                     className="delete-button"
@@ -73,6 +73,7 @@ function App() {
                   >
                     Delete
                   </button>
+                  </div>
                 </li>
               );
             })}
