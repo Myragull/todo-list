@@ -17,7 +17,14 @@ function App() {
     settitle("");
   };
 
-  console.log(todos);
+const handleToggle = (id) => {
+  const updatedTodos = todos.map((todo) =>
+    todo.id === id ? { ...todo, completed: !todo.completed } : todo
+  );
+  settodos(updatedTodos);
+};
+
+
  const handlerDelete = (id) => {
     const filteredTodos = todos.filter((todo) => todo.id !== id);
     settodos(filteredTodos);
@@ -46,8 +53,8 @@ function App() {
                 key={todo.id}>
                   <label>
           <input type="checkbox" 
-          checked={checked}
-          onChange={handleChange}
+          checked={todo.completed}
+          onChange={()=>handleToggle(todo.id)}
           />
            <span className="todo-text">{todo.title}</span>
          </label>
