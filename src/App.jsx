@@ -53,9 +53,9 @@ function App() {
           checked={checked}
           onChange={handleChange}
           />
-          
+           <span className="todo-text">{todo.title}</span>
          </label>
-          <span className="todo-text">{todo.title}</span>
+         
                   <button
                     className="delete-button"
                     onClick={() => handlerDelete(todo.id)}
