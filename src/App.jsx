@@ -6,7 +6,7 @@ function App() {
   const [title, settitle] = useState("");
   const [todos, settodos] = useState([]);
 
-  const HandleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const newtodo = {
       id: nanoid(),
@@ -18,7 +18,7 @@ function App() {
   };
 
   console.log(todos);
- const HandlerDelete = (id) => {
+ const handlerDelete = (id) => {
     const filteredTodos = todos.filter((todo) => todo.id !== id);
     settodos(filteredTodos);
   };
@@ -27,7 +27,7 @@ function App() {
     <div className="main-container">
       <div className="content-container">
         <h1>To-Do List</h1>
-        <form onSubmit={HandleSubmit}>
+        <form onSubmit={handleSubmit}>
           <input
           className="user-input"
             type="text"
@@ -47,7 +47,7 @@ function App() {
                   <span className="todo-text">{todo.title}</span>
                   <button
                     className="delete-button"
-                    onClick={() => HandlerDelete(todo.id)}
+                    onClick={() => handlerDelete(todo.id)}
                   >
                     Delete
                   </button>
