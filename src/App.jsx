@@ -5,11 +5,7 @@ import "./App.css";
 function App() {
   const [title, settitle] = useState("");
   const [todos, settodos] = useState([]);
-  const [checked, setChecked]= useState(false);
-   const handleChange = () => {
-    setChecked(!checked);
-  };
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     const newtodo = {
