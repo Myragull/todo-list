@@ -5,6 +5,10 @@ import "./App.css";
 function App() {
   const [title, settitle] = useState("");
   const [todos, settodos] = useState([]);
+  const [checked, setChecked]= useState(false);
+   const handleChange = () => {
+    setChecked(!checked);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,7 +30,7 @@ function App() {
   return (
     <div className="main-container">
       <div className="content-container">
-        <h1>To-Do List</h1>
+      <h1>To-Do List</h1>
         <form onSubmit={handleSubmit}>
           <input
           className="user-input"
@@ -44,7 +48,14 @@ function App() {
                 <li
                 className="list-li"
                 key={todo.id}>
-                  <span className="todo-text">{todo.title}</span>
+                  <label>
+          <input type="checkbox" 
+          checked={checked}
+          onChange={handleChange}
+          />
+          
+         </label>
+          <span className="todo-text">{todo.title}</span>
                   <button
                     className="delete-button"
                     onClick={() => handlerDelete(todo.id)}
