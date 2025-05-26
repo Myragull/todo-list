@@ -18,7 +18,10 @@ function App() {
   };
 
   console.log(todos);
-
+ const HandlerDelete = (id) => {
+    const filteredTodos = todos.filter((todo) => todo.id !== id);
+    settodos(filteredTodos);
+  };
  
   return (
     <div className="main-container">
@@ -42,6 +45,12 @@ function App() {
                 className="list-li"
                 key={todo.id}>
                   <span className="todo-text">{todo.title}</span>
+                  <button
+                    className="delete-button"
+                    onClick={() => HandlerDelete(todo.id)}
+                  >
+                    Delete
+                  </button>
                 </li>
               );
             })}
