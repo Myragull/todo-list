@@ -8,6 +8,10 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    if(title.trim() === ""){
+      return;
+    }
     const newtodo = {
       id: nanoid(),
       title: title,
