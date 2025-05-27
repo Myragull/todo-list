@@ -9,10 +9,7 @@ function Form({todos,settodos}) {
   reset,
   formState: { errors },
 } = useForm();
-
- const handleSubmit = (e) => {
-    e.preventDefault();
-    
+   
     if(title.trim() === ""){
       return;
     }
@@ -23,17 +20,15 @@ function Form({todos,settodos}) {
     };
     settodos([...todos, newtodo]);
     settitle("");
-  };
-
+  
   return (
     <>
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit(onsubmit)}>
           <input
             className="user-input"
             type="text"
-            value={title}
             placeholder="Add a new task"
-            onChange={(e) => settitle(e.target.value)}
+            {...register("title")}
           />
           <button className="add-btn" type="submit">
             Add
