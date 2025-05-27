@@ -16,16 +16,16 @@ const onSubmit=(data)=>{
   }
   const newtodo = {
     id: nanoid(),
-    title: title,
+    title: data.title,
     completed: false,
   };
   settodos([...todos, newtodo]);
-  settitle("");
+  reset();
 }
   
   return (
     <>
-    <form onSubmit={handleSubmit(onsubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)}>
           <input
             className="user-input"
             type="text"
