@@ -4,7 +4,7 @@ import Form from "./Components/Form";
 import TodoList from "./Components/TodoList";
 
 function App() {
-  const [title, settitle] = useState("");
+
   const [todos, settodos] = useState([]);
 
   return (
@@ -12,7 +12,7 @@ function App() {
       <div className="content-container">
         <h1>To-Do List</h1>
         
-           < Form title={title} settitle={settitle} settodos={settodos}  todos={todos}/>
+           < Form settodos={settodos}  todos={todos}/>
 
            <TodoList settodos={settodos}  todos={todos}/>
 
