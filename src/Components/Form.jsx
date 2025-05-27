@@ -1,6 +1,14 @@
 import { nanoid } from "nanoid";
+import {useForm} from "react-hook-form"
 
-function Form({todos,settodos,settitle,title}) {
+function Form({todos,settodos}) {
+
+  const {
+  register,
+  handleSubmit,
+  reset,
+  formState: { errors },
+} = useForm();
 
  const handleSubmit = (e) => {
     e.preventDefault();
