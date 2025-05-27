@@ -1,6 +1,3 @@
-# todo-list :
-live at :https://todo-list-tau-flax-63.vercel.app/
-
 # To-Do List App
 
 A dynamic and responsive To-Do List application built with React, featuring modern form handling using React Hook Form. This project allows users to add, edit, and delete tasks seamlessly with real-time form validation and state management.
@@ -37,24 +34,12 @@ This app allows users to:
 - **JavaScript (ES6+)**
 - **HTML & CSS (Module-based styling)**
 
-## Project Structure
-src/
-├── App.jsx
-├── components/
-│ ├── Form.jsx
-│ ├── TodoList.jsx
-│ └── TodoItem.jsx
-├── styles/
-│ └── app.css
-└── main.jsx
-
-
 ## Live Demo
 
-View Live App:https://todo-list-tau-flax-63.vercel.app/
+View Live App : https://todo-list-tau-flax-63.vercel.app/
 
 ## Author
 
-Made with passion by Myra Gull(https://github.com/Myragull)
+Made with passion by Myra Gull (https://github.com/Myragull)
 
 
