@@ -10,16 +10,18 @@ function Form({todos,settodos}) {
   formState: { errors },
 } = useForm();
    
-    if(title.trim() === ""){
-      return;
-    }
-    const newtodo = {
-      id: nanoid(),
-      title: title,
-      completed: false,
-    };
-    settodos([...todos, newtodo]);
-    settitle("");
+const onSubmit=(data)=>{
+  if(title.trim() === ""){
+    return;
+  }
+  const newtodo = {
+    id: nanoid(),
+    title: title,
+    completed: false,
+  };
+  settodos([...todos, newtodo]);
+  settitle("");
+}
   
   return (
     <>
@@ -28,7 +30,7 @@ function Form({todos,settodos}) {
             className="user-input"
             type="text"
             placeholder="Add a new task"
-            {...register("title")}
+            {...register("data")}
           />
           <button className="add-btn" type="submit">
             Add
