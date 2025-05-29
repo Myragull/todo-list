@@ -11,7 +11,7 @@ function Form({todos,settodos}) {
 } = useForm();
    
 const onSubmit=(data)=>{
-  if(title.trim() === ""){
+  if(data.title.trim() === ""){
     return;
   }
   const newtodo = {
@@ -30,7 +30,7 @@ const onSubmit=(data)=>{
             className="user-input"
             type="text"
             placeholder="Add a new task"
-            {...register("data")}
+            {...register("title")}
           />
           <button className="add-btn" type="submit">
             Add
