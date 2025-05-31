@@ -1,7 +1,9 @@
 function TodoItem({ todos, todo, settodos }) {
+
   const handlerDelete = (id) => {
     const filteredTodos = todos.filter((todo) => todo.id !== id);
     settodos(filteredTodos);
+    
   };
 
   const handleToggle = (id) => {
